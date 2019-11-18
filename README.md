@@ -30,4 +30,10 @@ Then after the installation open your terminal:
 
 >> jupyter notebook
 
+We are using libraries for our analysis. If not installed (Linux):
+
+>> sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas
+
+>> pip install seaborn
+
 And run the .ipynb file via Notebook

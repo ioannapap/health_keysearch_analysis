@@ -6,15 +6,11 @@
 
 import pandas as pd
 import numpy as np
-import math
 import matplotlib.pyplot as plt
-import matplotlib as mpl
 import seaborn as sns
 import scipy as sp
 from scipy import stats
-from scipy.stats import t, ttest_ind
 from pandas import Series, DataFrame
-from statsmodels.stats import weightstats as stests
 
 health_issue_df = pd.read_csv('health_concern_countries.csv')
 
@@ -33,8 +29,6 @@ health_issue_df.Prevention = health_issue_df.Prevention.str[:-1].astype(int)
 health_issue_df.Symptoms =health_issue_df.Symptoms.str[:-1].astype(int)
 health_issue_df.Diseases =health_issue_df.Diseases.str[:-1].astype(int)
 health_issue_df.Treatment =health_issue_df.Treatment.str[:-1].astype(int)
-
-#print(health_issue_df)
 
 
 # In[3]:
@@ -136,8 +130,6 @@ plt.savefig('Treatment_search%.png')
 #refactoring our DataFrame so as to make other plots --> health_issue_df2
 health_issue_df2 = pd.melt(health_issue_df, id_vars = 'Country', var_name = 'Key Search', value_name = 'Search %')
 
-#print(health_issue_df2)
-
 
 # In[9]:
 
@@ -190,8 +182,6 @@ health_issue_df3 = pd.DataFrame(health_issue_df3)
 health_issue_df3.reset_index(inplace = True)  
 health_issue_df3.rename(columns = {'index':'Key Search', 0: 'Search %'}, inplace = True)
 health_issue_df3['Search %'] = health_issue_df3['Search %']/len(health_issue_df)
-
-print(health_issue_df3)
 
 
 # In[12]:
@@ -382,10 +372,4 @@ health_issue_df.corr(method = 'pearson')
 
 #Spearman Correlation Coefficient
 health_issue_df.corr(method = 'spearman')
-
-
-# In[ ]:
-
-
-
 
