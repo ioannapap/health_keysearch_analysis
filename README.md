@@ -1,5 +1,5 @@
 # health_keysearch_analysis
-"Web is our Home Doctor": Analysis on how people per countries use the web for their health concerns. 
+"Web is our Home Doctor": Analysis on how people per countries use the web search for their health concerns. 
 
 ANALYSIS CASE:
 When we believe that our health is not at its best, we dash to search on the internet for what this might be.
