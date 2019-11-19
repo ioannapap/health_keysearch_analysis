@@ -35,7 +35,7 @@ health_issue_df.Treatment =health_issue_df.Treatment.str[:-1].astype(int)
 
 
 sns.set(style="whitegrid")
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(15, 6))
 
 sns.barplot(x = 'Diagnosis', y = 'Country', palette = 'inferno', data = health_issue_df)
 
@@ -53,7 +53,7 @@ plt.savefig('diagnosis_search%.png')
 # In[4]:
 
 
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(15, 6))
 
 sns.barplot(x = 'Prevention', y = 'Country', palette = 'inferno', data = health_issue_df)
 
@@ -73,7 +73,7 @@ plt.savefig('prevention_search%.png')
 # In[5]:
 
 
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(15, 6))
 
 sns.barplot(x = 'Symptoms', y = 'Country', palette = 'inferno', data = health_issue_df)
 
@@ -91,7 +91,7 @@ plt.savefig('Symptoms_search%.png')
 # In[6]:
 
 
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(15, 6))
 
 sns.barplot(x = 'Diseases', y = 'Country', palette = 'inferno', data = health_issue_df)
 
@@ -109,7 +109,7 @@ plt.savefig('Diseases_search%.png')
 # In[7]:
 
 
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(15, 6))
 
 sns.barplot(x = 'Treatment', y = 'Country', palette = 'inferno', data = health_issue_df)
 
@@ -155,7 +155,7 @@ plt.savefig('searchKeys%_percountry_catplot.png')
 # In[10]:
 
 
-plt.figure(figsize=(12, 8))
+plt.figure(figsize=(15, 8))
 
 a = health_issue_df2.pivot('Country', 'Key Search', 'Search %')
 sns.heatmap(a, cmap='Reds')
@@ -187,7 +187,7 @@ health_issue_df3['Search %'] = health_issue_df3['Search %']/len(health_issue_df)
 # In[12]:
 
 
-plt.figure(figsize=(10, 5))
+plt.figure(figsize=(15, 5))
 
 sns.barplot(x = 'Key Search', y = 'Search %', palette = palette, data = health_issue_df3 )
 
@@ -206,6 +206,7 @@ plt.savefig('28countries_searchkeys%_barplot.png')
 # In[13]:
 
 
+plt.figure(figsize=(10, 7))
 sns.set(style = 'white')
 
 g = sns.scatterplot(x = 'Diagnosis', y = 'Prevention', hue = 'Country', palette = 'inferno', data = health_issue_df)
@@ -224,6 +225,7 @@ plt.savefig('diagnosis_prevention%_scatterplot.png')
 # In[14]:
 
 
+plt.figure(figsize=(10, 7))
 g = sns.scatterplot(x = 'Diagnosis', y = 'Symptoms', hue = 'Country', palette = 'inferno', data = health_issue_df)
 g.legend(loc = 'center right', bbox_to_anchor = (2.25, 0.5), ncol = 2)
 
@@ -240,6 +242,7 @@ plt.savefig('diagnosis_symptoms%_scatterplot.png')
 # In[15]:
 
 
+plt.figure(figsize=(10, 7))
 g = sns.scatterplot(x = 'Diagnosis', y = 'Diseases', hue = 'Country', palette = 'inferno', data = health_issue_df)
 g.legend(loc = 'center right', bbox_to_anchor = (2.25, 0.5), ncol = 2)
 
@@ -255,6 +258,7 @@ plt.savefig('diagnosis_diseases%_scatterplot.png')
 # In[16]:
 
 
+plt.figure(figsize=(10, 7))
 g = sns.scatterplot(x = 'Diagnosis', y = 'Treatment', hue = 'Country', palette = 'inferno', data = health_issue_df)
 g.legend(loc = 'center right', bbox_to_anchor = (2.25, 0.5), ncol = 2)
 
@@ -270,6 +274,7 @@ plt.savefig('diagnosis_treatment%_scatterplot.png')
 # In[17]:
 
 
+plt.figure(figsize=(10, 7))
 g = sns.scatterplot(x = 'Prevention', y = 'Symptoms', hue = 'Country', palette = 'inferno', data = health_issue_df)
 g.legend(loc = 'center right', bbox_to_anchor = (2.25, 0.5), ncol = 2)
 
@@ -286,6 +291,7 @@ plt.savefig('prevention_symptoms%_scatterplot.png')
 # In[18]:
 
 
+plt.figure(figsize=(10, 7))
 g = sns.scatterplot(x = 'Prevention', y = 'Diseases', hue = 'Country', palette = 'inferno', data = health_issue_df)
 g.legend(loc = 'center right', bbox_to_anchor = (2.25, 0.5), ncol = 2)
 
@@ -302,6 +308,7 @@ plt.savefig('prevention_diseases%_scatterplot.png')
 # In[19]:
 
 
+plt.figure(figsize=(10, 7))
 g = sns.scatterplot(x = 'Prevention', y = 'Treatment', hue = 'Country', palette = 'inferno', data = health_issue_df)
 g.legend(loc = 'center right', bbox_to_anchor = (2.25, 0.5), ncol = 2)
 
@@ -317,6 +324,7 @@ plt.savefig('prevention_treatment%_scatterplot.png')
 # In[20]:
 
 
+plt.figure(figsize=(10, 7))
 g = sns.scatterplot(x = 'Symptoms', y = 'Diseases', hue = 'Country', palette = 'inferno', data = health_issue_df)
 g.legend(loc = 'center right', bbox_to_anchor = (2.25, 0.5), ncol = 2)
 
@@ -332,6 +340,7 @@ plt.savefig('symptoms_diseases%_scatterplot.png')
 # In[21]:
 
 
+plt.figure(figsize=(10, 7))
 g = sns.scatterplot(x = 'Symptoms', y = 'Treatment', hue = 'Country', palette = 'inferno', data = health_issue_df)
 g.legend(loc = 'center right', bbox_to_anchor = (2.25, 0.5), ncol = 2)
 
@@ -348,6 +357,7 @@ plt.savefig('symptoms_treatment%_scatterplot.png')
 # In[22]:
 
 
+plt.figure(figsize=(10, 7))
 g = sns.scatterplot(x = 'Diseases', y = 'Treatment', hue = 'Country', palette = 'inferno', data = health_issue_df)
 g.legend(loc = 'center right', bbox_to_anchor = (2.25, 0.5), ncol = 2)
 
